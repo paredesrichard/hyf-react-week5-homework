@@ -12,6 +12,34 @@ body {
   display: block;
 }
 
+.pad10 {
+  padding: 10px;
+}
+
 .content {
   padding: 25px;
+}
+
+#launch-manifest-list {
+  width: 100%;
+}
+
+
+#launch-manifest-list thead {
+  text-align: left;
+  width: 100%;
+  background-color: #b3bfd1;
+  font-size: 1.2em;
+}
+
+#launch-manifest-list tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+#launch-manifest-list tr:hover {
+  background-color: #ddd;
+}
+
+#launch-manifest-list td {
+  padding: 5px;
 }

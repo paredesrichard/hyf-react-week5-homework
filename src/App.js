@@ -13,6 +13,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/launches" component={Launches} />
+          <Route exact path="/launches/:param" component={Launches} />
           <Route exact path="/rockets" component={RocketsPage} />
           <Route exact path="/capsules" component={CapsulesPage} />
           <Route exact path="/info" component={CompanyInfoPage} />

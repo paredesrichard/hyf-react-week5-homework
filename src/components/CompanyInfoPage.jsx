@@ -17,7 +17,6 @@ class CompanyInfoPage extends Component {
   }
   render() {
     const { companyInfo } = this.state;
-    console.log("companyInfo", companyInfo);
     return (
       <div className="box">
         <h1 className="text-center"> Welcome to SpaceX Company Info Page </h1>
