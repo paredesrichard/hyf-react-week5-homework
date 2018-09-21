@@ -22,7 +22,7 @@ class DisplayPopupRecord extends Component {
           Launch Success: {data.launch_success ? "True" : "False"} <br />
           Launch Year: {data.launch_year} <br />
           Rocket: {data.rocket.rocket_name} <br />
-          Upcoming: {data.upcoming ? Date(data.launch_date_unix) : "No"}
+          Upcoming: {data.upcoming ? data.launch_date_utc : "No"}
         </p>
         <p>Details: {data.details}</p>
       </div>
