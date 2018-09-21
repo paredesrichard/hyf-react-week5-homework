@@ -11,7 +11,10 @@ body {
   box-sizing: border-box;
   display: block;
 }
-
+ 
+td {
+  padding: 10px;
+}
 .pad10 {
   padding: 10px;
 }
@@ -42,4 +45,27 @@ body {
 
 #launch-manifest-list td {
   padding: 5px;
+}
+
+#capsules-list {
+  width: 100%;
+}
+
+#capsules-list tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+#capsules-list tr {
+  width: 100%;
+}
+
+.col1 {
+  width: 30%;
+}
+.col2 {
+  width: 70%;
+}
+
+.col3 {
+  width: 100%;
 }
