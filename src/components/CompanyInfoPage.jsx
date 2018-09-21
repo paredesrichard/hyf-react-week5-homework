@@ -10,7 +10,6 @@ class CompanyInfoPage extends Component {
   }
 
   componentDidMount() {
-    console.log("component did mount");
     fetchSpaceXData("/info").then(data => {
       this.setState({ companyInfo: data });
     });
@@ -23,14 +22,15 @@ class CompanyInfoPage extends Component {
         <div className="content">
           <h2>CEO : {companyInfo.ceo}</h2>
           <h3>Summary:</h3>
-          <p>
-            {companyInfo.summary}
-            <br /><br />
+          <p>{companyInfo.summary}</p>
+            <span className="pt2">Company name: {companyInfo.name}</span>
+            <br />
             Employees: {companyInfo.employees}
             <br />
             Founded: {companyInfo.founded}
             <br />
-          </p>
+            Founder: {companyInfo.founder}
+            <br />
         </div>
       </div>
     );

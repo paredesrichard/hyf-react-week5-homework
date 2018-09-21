@@ -47,17 +47,6 @@ td {
   padding: 5px;
 }
 
-#capsules-list {
-  width: 100%;
-}
-
-#capsules-list tr:nth-child(even){
-  background-color: #f2f2f2;
-}
-
-#capsules-list tr {
-  width: 100%;
-}
 
 .col1 {
   width: 30%;
@@ -68,4 +57,8 @@ td {
 
 .col3 {
   width: 100%;
+}
+
+.pt2 {
+  padding-top: 2em;
 }

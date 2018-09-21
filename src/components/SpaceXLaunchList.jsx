@@ -3,6 +3,7 @@ import "../App.css";
 
 class SpaceXLaunchList extends Component {
   render() {
+    console.log(this.props.data)
     return (
       <div className="box">
         <table id="launch-manifest-list">

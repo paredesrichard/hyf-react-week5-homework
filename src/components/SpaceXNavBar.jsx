@@ -19,9 +19,6 @@ class SpaceXNavBar extends Component {
           <NavItem href="/rockets">
             Rockets
           </NavItem>
-          <NavItem href="/capsules">
-            Capsules
-          </NavItem>
           <NavItem href="/info">
             Company Info
           </NavItem>
