@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import "../App.css";
 
+import Popup from "reactjs-popup";
+import DisplayPopupRecord from "./DisplayPopupRecord";
+
 class SpaceXLaunchList extends Component {
   render() {
-    console.log(this.props.data)
+    console.log(this.props.data);
     return (
       <div className="box">
         <table id="launch-manifest-list">
@@ -17,21 +20,27 @@ class SpaceXLaunchList extends Component {
           </thead>
           <tbody>
             {this.props.data.map(data => (
-              <tr
+              <Popup
                 key={data.flight_number}
-                //onClick={e => this.DisplayListDetails(data.flight_number)}
+                trigger={
+                  <tr key={data.flight_number}>
+                    <td>{data.flight_number}</td>
+                    <td>{data.mission_name}</td>
+                    <td>{data.launch_date_utc}</td>
+                    <td>
+                      {data.launch_success
+                        ? "Success"
+                        : data.launch_success === null
+                          ? "Upcoming"
+                          : "Failed"}
+                    </td>
+                  </tr>
+                }
+                modal
+                closeOnDocumentClick
               >
-                <td>{data.flight_number}</td>
-                <td>{data.mission_name}</td>
-                <td>{data.launch_date_utc}</td>
-                <td>
-                  {data.launch_success
-                    ? "Success"
-                    : data.launch_success === null
-                      ? "Upcoming"
-                      : "Failed"}
-                </td>
-              </tr>
+                <DisplayPopupRecord data={data} />
+              </Popup>
             ))}
           </tbody>
         </table>

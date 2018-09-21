@@ -5,18 +5,22 @@ body {
 }
 
 .box {
-  box-shadow: 0 2px 5px 0px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.25);
   width: 700px;
   margin: auto;
   box-sizing: border-box;
   display: block;
 }
- 
+
 td {
   padding: 10px;
 }
 .pad10 {
   padding: 10px;
+}
+
+.pad1 {
+  padding: 2em;
 }
 
 .content {
@@ -27,6 +31,9 @@ td {
   width: 100%;
 }
 
+.companyimage {
+  width: 100%;
+}
 
 #launch-manifest-list thead {
   text-align: left;
@@ -35,7 +42,7 @@ td {
   font-size: 1.2em;
 }
 
-#launch-manifest-list tr:nth-child(even){
+#launch-manifest-list tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
@@ -46,7 +53,6 @@ td {
 #launch-manifest-list td {
   padding: 5px;
 }
-
 
 .col1 {
   width: 30%;
@@ -61,4 +67,9 @@ td {
 
 .pt2 {
   padding-top: 2em;
+}
+
+.mission-patch {
+  height: 150px;
+  border-radius: 50%;
 }

@@ -15,7 +15,6 @@ class RocketsPage extends Component {
   componentDidMount() {
     fetchSpaceXData(this.state.initialURL).then(data => {
       this.setState({ rocketsDetails: data });
-      console.log("rocket details:", data)
     });
   }
 

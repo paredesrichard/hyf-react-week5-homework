@@ -20,6 +20,7 @@ class CompanyInfoPage extends Component {
       <div className="box">
         <h1 className="text-center"> Welcome to SpaceX Company Info Page </h1>
         <div className="content">
+          <img className="companyimage" src="https://c.slashgear.com/wp-content/uploads/2017/12/spacex-980x620.jpg" alt="SpaceX" />
           <h2>CEO : {companyInfo.ceo}</h2>
           <h3>Summary:</h3>
           <p>{companyInfo.summary}</p>
