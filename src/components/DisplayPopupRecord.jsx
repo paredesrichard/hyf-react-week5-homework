@@ -1,14 +1,22 @@
 import React, { Component } from "react";
 import "../App.css";
-import "../index.css";
+import styled from "styled-components";
+
+const StyledPopImg = styled.img`
+  height: 150px;
+  border-radius: 10%;
+`;
+
+const StyledPopP = styled.p`
+  padding: 2em;
+`
 
 class DisplayPopupRecord extends Component {
   render() {
     const data = this.props.data;
     return (
       <div key={data.flight_number} className="App">
-        <img
-          className="mission-patch"
+        <StyledPopImg
           src={
             data.links.mission_patch !== null
               ? data.links.mission_patch
@@ -16,15 +24,15 @@ class DisplayPopupRecord extends Component {
           }
           alt="mission patch"
         />
-        <p className="pad1">
+        <StyledPopP>
           Mission name: {data.mission_name} <br />
           Flight number: {data.flight_number} <br />
           Launch Success: {data.launch_success ? "True" : "False"} <br />
           Launch Year: {data.launch_year} <br />
           Rocket: {data.rocket.rocket_name} <br />
           Upcoming: {data.upcoming ? data.launch_date_utc : "No"}
-        </p>
-        <p>Details: {data.details}</p>
+        </StyledPopP>
+        <StyledPopP>Details: {data.details}</StyledPopP>
       </div>
     );
   }
